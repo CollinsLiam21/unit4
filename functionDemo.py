@@ -17,10 +17,13 @@ def bigger(a,b):
 def slope(x1, y1, x2, y2):
     print((y2-y1)/(x2-x1))
 
-slope(2,3,4,5)
-bigger(100,5)
-bigger('smedinghoff','christo')
-bigger(True,False)
+#slope(2,3,4,5)
+#bigger(100,5)
+#bigger('smedinghoff','christo')
+#bigger(True,False)
 #double(12) #test of double function
 #double('w') #test of double with string
 #double(True) #test of double with a boolean
+
+print('the max of 3 and 4 is', max(3,4))
+print('the max of 3 and 4 is', bigger(3,4))
