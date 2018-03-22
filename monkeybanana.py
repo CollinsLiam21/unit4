@@ -4,26 +4,54 @@
 
 from ggame import *
 
+from random import randint
+
 #constants
 ROWS = 20
 COLS = 40
 CELL_SIZE = 25
 
 def moveRight(event):
-    monkey.x += CELL_SIZE
-    if monkey.x == banana.x and monkey.y == banana.y:
-        print('got it')
+    if monkey.x < (COLS-1)*CELL_SIZE:
+        monkey.x += CELL_SIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
+            data['score'] += 10
+            print(data['score'])
 
 def moveLeft(event):
-    monkey.x -= CELL_SIZE
+    if monkey.x > 0:
+        monkey.x -= CELL_SIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
+            data['score'] += 10
+            print(data['score'])
 
 def moveDown(event):
-    monkey.y += CELL_SIZE
+    if monkey.y < (ROWS-1)*CELL_SIZE:
+        monkey.y += CELL_SIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
+            data['score'] += 10
+            print(data['score'])
     
 def moveUp(event):
-    monkey.y -= CELL_SIZE
+    if monkey.y > 0:
+        monkey.y -= CELL_SIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
+            data['score'] += 10
+            print(data['score'])
+    
+def moveBanana():
+    banana.x = randint(0,COLS-1)*CELL_SIZE
+    banana.y = randint(0,ROWS-1)*CELL_SIZE
 
 if __name__ == '__main__':
+    
+    #hold variables in dictionary
+    data = {}
+    data['score'] = 0
     
     #colors
     green = Color(0x006600,1)
