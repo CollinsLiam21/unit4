@@ -3,10 +3,11 @@
 #warmup11.py
 
 def prime(x):
-    i = 1
-    while i <= x/2:
+    i = 2
+    while i < x:
         if x%i == 0:
-            return('True')
+            return False
         i += 1
+    return True
 
-prime(3)
+print(prime(7))
