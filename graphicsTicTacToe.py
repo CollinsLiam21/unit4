@@ -7,7 +7,9 @@ from ggame import *
 '''def isEmpty(numSquare):
     if numSquare == 1:'''
 
-
+def mouseClick(event):
+    if event.x < 150 and event.y < 350:
+        Sprite(x, (10,10))
 
 if __name__=='__main__':
     
@@ -29,7 +31,6 @@ if __name__=='__main__':
     Sprite(boxRight, (350,0))
     Sprite(boxTop, (0,150))
     Sprite(boxBottom, (0,350))
-    Sprite(x)
     Sprite(o, (200,0))
     
     App().run()
