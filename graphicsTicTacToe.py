@@ -41,21 +41,21 @@ def computerTurn():
     if n == 1:
         Sprite(o, (25,10))
     elif n == 2:
-        Sprite(x, (215,10))
+        Sprite(o, (215,10))
     elif n == 3:
-        Sprite(x, (400,10))
+        Sprite(o, (400,10))
     elif n == 4:
-        Sprite(x, (25,180))
+        Sprite(o, (25,180))
     elif n == 5:
-        Sprite(x, (215,180))
+        Sprite(o, (215,180))
     elif n == 6:
-        Sprite(x, (400,180))
+        Sprite(o, (400,180))
     elif n == 7:
-        Sprite(x, (25,380))
+        Sprite(o, (25,380))
     elif n == 8:
-        Sprite(x, (215,380))
+        Sprite(o, (215,380))
     elif n == 9:
-        Sprite(x, (400,380))
+        Sprite(o, (400,380))
     
 
 if __name__=='__main__':
