@@ -76,42 +76,42 @@ def isEmpty(numSquare):
             return False
         else:
             return True
-    if numSquare == 2:
+    elif numSquare == 2:
         if data['square2'] == 'x' or data['square2'] == 'o':
             return False
         else:
             return True
-    if numSquare == 3:
+    elif numSquare == 3:
         if data['square3'] == 'x' or data['square3'] == 'o':
             return False
         else:
             return True
-    if numSquare == 4:
+    elif numSquare == 4:
         if data['square4'] == 'x' or data['square4'] == 'o':
             return False
         else:
             return True
-    if numSquare == 5:
+    elif numSquare == 5:
         if data['square5'] == 'x' or data['square5'] == 'o':
             return False
         else:
             return True
-    if numSquare == 6:
+    elif numSquare == 6:
         if data['square6'] == 'x' or data['square6'] == 'o':
             return False
         else:
             return True
-    if numSquare == 7:
+    elif numSquare == 7:
         if data['square7'] == 'x' or data['square7'] == 'o':
             return False
         else:
             return True
-    if numSquare == 8:
+    elif numSquare == 8:
         if data['square8'] == 'x' or data['square8'] == 'o':
             return False
         else:
             return True
-    if numSquare == 9:
+    elif numSquare == 9:
         if data['square9'] == 'x' or data['square9'] == 'o':
             return False
         else:
@@ -121,15 +121,15 @@ def isEmpty(numSquare):
 if __name__=='__main__':
     
     data = {}
-    data['square1'] = 0
-    data['square2'] = 0
-    data['square3'] = 0
-    data['square4'] = 0
-    data['square5'] = 0
-    data['square6'] = 0
-    data['square7'] = 0
-    data['square8'] = 0
-    data['square9'] = 0
+    data['square1'] = ''
+    data['square2'] = ''
+    data['square3'] = ''
+    data['square4'] = ''
+    data['square5'] = ''
+    data['square6'] = ''
+    data['square7'] = ''
+    data['square8'] = ''
+    data['square9'] = ''
     
     
     #color codes
