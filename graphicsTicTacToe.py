@@ -9,31 +9,23 @@ from random import randint
 def mouseClick(event):
     if event.x < 150 and event.y < 150:
         Sprite(x, (25,10))
-        computerTurn()
     elif event.x < 350 and event.y < 150:
         Sprite(x, (215,10))
-        computerTurn()
     elif event.x < 550 and event.y < 150:
         Sprite(x, (400,10))
-        computerTurn()
     elif event.x < 150 and event.y < 350:
         Sprite(x, (25,180))
-        computerTurn()
     elif event.x < 350 and event.y < 350:
         Sprite(x, (215,180))
-        computerTurn()
     elif event.x < 550 and event.y < 350:
         Sprite(x, (400,180))
-        computerTurn()
     elif event.x < 150 and event.y < 550:
         Sprite(x, (25,380))
-        computerTurn()
     elif event.x < 350 and event.y < 550:
         Sprite(x, (215,380))
-        computerTurn()
     elif event.x < 550 and event.y < 550:
         Sprite(x, (400,380))
-        computerTurn()
+    computerTurn()
     
 
 def computerTurn():
