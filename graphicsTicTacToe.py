@@ -48,6 +48,10 @@ def computerTurn():
         Sprite(o, (215,380))
     elif n == 9:
         Sprite(o, (400,380))
+
+def isEmpty(numSquare):
+    if numSquare == 1:
+        if x in 
     
 
 if __name__=='__main__':
