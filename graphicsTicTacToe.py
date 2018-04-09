@@ -9,22 +9,31 @@ from random import randint
 def mouseClick(event):
     if event.x < 150 and event.y < 150:
         Sprite(x, (25,10))
+        square1 = 'x'
     elif event.x < 350 and event.y < 150:
         Sprite(x, (215,10))
+        square2 = 'x'
     elif event.x < 550 and event.y < 150:
         Sprite(x, (400,10))
+        square3 = 'x'
     elif event.x < 150 and event.y < 350:
         Sprite(x, (25,180))
+        square4 = 'x'
     elif event.x < 350 and event.y < 350:
         Sprite(x, (215,180))
+        square5 = 'x'
     elif event.x < 550 and event.y < 350:
         Sprite(x, (400,180))
+        square6 = 'x'
     elif event.x < 150 and event.y < 550:
         Sprite(x, (25,380))
+        square7 = 'x'
     elif event.x < 350 and event.y < 550:
         Sprite(x, (215,380))
+        square8 = 'x'
     elif event.x < 550 and event.y < 550:
         Sprite(x, (400,380))
+        square9 = 'x'
     computerTurn()
     
 
@@ -49,14 +58,30 @@ def computerTurn():
     elif n == 9:
         Sprite(o, (400,380))
 
+
+
 def isEmpty(numSquare):
     if numSquare == 1:
-        if x in 
+        if square1 == 'x' or square1 == 'o':
+            return False
+        else:
+            return True
     
 
 if __name__=='__main__':
     
+    data = {}
+    data['isEmpty'] = True
     
+    data[square1] = 0
+    square2 = 0
+    square3 = 0
+    square4 = 0
+    square5 = 0
+    square6 = 0
+    square7 = 0
+    square8 = 0
+    square9 = 0
     
     #color codes
     black = Color(0x000000,1)
