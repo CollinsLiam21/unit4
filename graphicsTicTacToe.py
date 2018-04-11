@@ -126,11 +126,7 @@ def fullBoard():
 
 if __name__=='__main__':
     
-    while True:
-        mouseClick(event)
-        if fullBoard() == True:
-            print('It is a tie')
-            break
+    
     
     #dictionary
     data = {}
@@ -143,6 +139,7 @@ if __name__=='__main__':
     data['square7'] = ''
     data['square8'] = ''
     data['square9'] = ''
+    data['gameOver'] = 'False'
     
     
     #color codes
