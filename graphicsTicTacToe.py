@@ -39,31 +39,31 @@ def mouseClick(event):
 
 def computerTurn():
     n = randint(1,9)
-    if n == 1:
+    if n == 1 and isEmpty(1) == True:
         Sprite(o, (25,10))
         data['square1'] = 'o'
-    elif n == 2:
+    elif n == 2 and isEmpty(2) == True:
         Sprite(o, (215,10))
         data['square2'] = 'o'
-    elif n == 3:
+    elif n == 3 and isEmpty(3) == True:
         Sprite(o, (400,10))
         data['square3'] = 'o'
-    elif n == 4:
+    elif n == 4 and isEmpty(4) == True:
         Sprite(o, (25,180))
         data['square4'] = 'o'
-    elif n == 5:
+    elif n == 5 and isEmpty(5) == True:
         Sprite(o, (215,180))
         data['square5'] = 'o'
-    elif n == 6:
+    elif n == 6 and isEmpty(6) == True:
         Sprite(o, (400,180))
         data['square6'] = 'o'
-    elif n == 7:
+    elif n == 7 and isEmpty(7) == True:
         Sprite(o, (25,380))
         data['square7'] = 'o'
-    elif n == 8:
+    elif n == 8 and isEmpty(8) == True:
         Sprite(o, (215,380))
         data['square8'] = 'o'
-    elif n == 9:
+    elif n == 9 and isEmpty(9) == True:
         Sprite(o, (400,380))
         data['square9'] = 'o'
     else:
