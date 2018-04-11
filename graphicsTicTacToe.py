@@ -67,13 +67,8 @@ def computerTurn():
         Sprite(o, (400,380))
         data['square9'] = 'o'
     else:
-        if fullBoard() == True:
-            print('It is a tie')
-            break
-        else:
-            computerTurn()
+        computerTurn()
         
-
 
 def isEmpty(numSquare):
     if numSquare == 1:
@@ -131,6 +126,13 @@ def fullBoard():
 
 if __name__=='__main__':
     
+    while True:
+        mouseClick(event)
+        if fullBoard() == True:
+            print('It is a tie')
+            break
+    
+    #dictionary
     data = {}
     data['square1'] = ''
     data['square2'] = ''
