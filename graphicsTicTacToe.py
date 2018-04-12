@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-
+#Adds an x where user clicks if possible
 def mouseClick(event):
     if data['gameOver'] == False:
         if (event.x < 150 and event.y < 150) and isEmpty(1) == True:
@@ -46,7 +46,7 @@ def mouseClick(event):
         if fullBoard() == True and winner() == False:
             Sprite(Tie, (600,100))
         
-
+#computer places an o in a random square if possible
 def computerTurn():
     n = randint(1,9)
     if n == 1 and isEmpty(1) == True:
@@ -79,8 +79,7 @@ def computerTurn():
     elif fullBoard() == False:
         computerTurn()
     
-
-
+#checks to see if the square has an x or o in it
 def isEmpty(numSquare):
     if numSquare == 1:
         if data['square1'] == 'x' or data['square1'] == 'o':
@@ -128,6 +127,7 @@ def isEmpty(numSquare):
         else:
             return True
 
+#checks to see if the board is full
 def fullBoard():
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
         return True
@@ -135,6 +135,7 @@ def fullBoard():
     else:
         return False
 
+#checks to see if there is a winner in the game, but does not say specifically who won
 def winner():
     if data['square1'] == 'x' and data['square2'] == 'x' and data['square3'] == 'x':
         return True
@@ -173,7 +174,6 @@ def winner():
     
 
 if __name__=='__main__':
-    
     
     
     #dictionary
