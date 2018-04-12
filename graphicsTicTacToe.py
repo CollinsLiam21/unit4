@@ -132,7 +132,7 @@ def fullBoard():
         return False
 
 def winner():
-    if data['square1'] = 'x' and data['square2'] = 'x' and data['square3'] = 'x'':
+    if data['square1'] == 'x' and data['square2'] == 'x' and data['square3'] == 'x':
         return True
     elif data['square4'] == 'x' and data['square5'] == 'x' and data['square6'] == 'x':
         return True
@@ -146,23 +146,23 @@ def winner():
         return True
     elif data['square1'] == 'x' and data['square5'] == 'x' and data['square9'] == 'x':
         return True
-    elif isEmpty(3) == 'x' and isEmpty(5) == 'x' and isEmpty(7) == 'x':
+    elif data['square3'] == 'x' and data['square5'] == 'x' and data['square7'] == 'x':
         return True
-    elif isEmpty(1) == 'o' and isEmpty(2) == 'o' and isEmpty(3) == 'o':
+    elif data['square1'] == 'o' and data['square2'] == 'o' and data['square3'] == 'o':
         return True
-    elif isEmpty(4) == 'o' and isEmpty(5) == 'o' and isEmpty(6) == 'o':
+    elif data['square4'] == 'o' and data['square5'] == 'o' and data['square6'] == 'o':
         return True
-    elif isEmpty(7) == 'o' and isEmpty(8) == 'o' and isEmpty(9) == 'o':
+    elif data['square7'] == 'o' and data['square8'] == 'o' and data['square9'] == 'o':
         return True
-    elif isEmpty(1) == 'o' and isEmpty(4) == 'o' and isEmpty(7) == 'o':
+    elif data['square1'] == 'o' and data['square4'] == 'o' and data['square7'] == 'o':
         return True
-    elif isEmpty(2) == 'o' and isEmpty(5) == 'o' and isEmpty(8) == 'o':
+    elif data['square2'] == 'o' and data['square5'] == 'o' and data['square8'] == 'o':
         return True
-    elif isEmpty(3) == 'o' and isEmpty(6) == 'o' and isEmpty(9) == 'o':
+    elif data['square3'] == 'o' and data['square6'] == 'o' and data['square9'] == 'o':
         return True
-    elif isEmpty(1) == 'o' and isEmpty(5) == 'o' and isEmpty(9) == 'o':
+    elif data['square1'] == 'o' and data['square5'] == 'o' and data['square9'] == 'o':
         return True
-    elif isEmpty(3) == 'o' and isEmpty(5) == 'o' and isEmpty(7) == 'o':
+    elif data['square3'] == 'o' and data['square5'] == 'o' and data['square7'] == 'o':
         return True
     else:
         return False
