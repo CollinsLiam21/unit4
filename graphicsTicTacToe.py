@@ -37,9 +37,11 @@ def mouseClick(event):
             data['square9'] = 'x'
         if winner() == True:
             print('We have a winner!')
+            data['gameOver'] == True
         computerTurn()
         if winner() == True:
             print('We have a winner!')
+            data['gameOver'] == True
         
     
 
