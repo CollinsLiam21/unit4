@@ -41,9 +41,9 @@ def mouseClick(event):
         computerTurn()
         if winner() == True:
             print('We have a winner!')
-            data['gameOver'] == True
+            data['gameOver'] = True
+        fullBoard()
         
-    
 
 def computerTurn():
     n = randint(1,9)
@@ -77,7 +77,7 @@ def computerTurn():
     elif fullBoard() == False:
         computerTurn()
     
-        
+
 
 def isEmpty(numSquare):
     if numSquare == 1:
@@ -129,7 +129,8 @@ def isEmpty(numSquare):
 def fullBoard():
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
         return True
-        data['gameOver'] == True
+        data['gameOver'] = True
+        print('We have a tie!')
     else:
         return False
 
