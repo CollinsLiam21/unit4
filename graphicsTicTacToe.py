@@ -36,12 +36,12 @@ def mouseClick(event):
             Sprite(x, (400,380))
             data['square9'] = 'x'
         if winner() == True:
-            print('We have a winner!')
-            data['gameOver'] == True
+            Sprite(Win, (600,100))
+            data['gameOver'] = True
         else:
             computerTurn()
             if winner() == True:
-                print('We have a winner!')
+                Sprite(Win, (600,100))
                 data['gameOver'] = True
         if fullBoard() == True and winner() == False:
             print('We have a tie!')
@@ -201,6 +201,7 @@ if __name__=='__main__':
     boxBottom = RectangleAsset(525,25,LineStyle(1,black))
     x = TextAsset('X',fill=black,style='bold 100pt Times')
     o = TextAsset('O',fill=black,style='bold 100pt Times')
+    Win = TextAsset('We Have A Winner!',fill=blue,style='bold 50pt Times')
     
     Sprite(boxRight, (150,0))
     Sprite(boxRight, (350,0))
