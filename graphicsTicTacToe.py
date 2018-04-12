@@ -35,8 +35,7 @@ def mouseClick(event):
         elif (event.x < 550 and event.y < 550) and isEmpty(9) == True:
             Sprite(x, (400,380))
             data['square9'] = 'x'
-        else:
-            computerTurn()
+        computerTurn()
     
 
 def computerTurn():
@@ -120,7 +119,7 @@ def isEmpty(numSquare):
             return True
 
 def fullBoard():
-    if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
+    if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False and winner == False:
         return True
         data['gameOver'] == True
     else:
