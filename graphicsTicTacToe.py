@@ -44,7 +44,7 @@ def mouseClick(event):
                 Sprite(Win, (600,100))
                 data['gameOver'] = True
         if fullBoard() == True and winner() == False:
-            print('We have a tie!')
+            Sprite(Tie, (600,100))
         
 
 def computerTurn():
@@ -189,7 +189,6 @@ if __name__=='__main__':
     data['square9'] = ''
     data['gameOver'] = False
     
-    
     #color codes
     black = Color(0x000000,1)
     blue = Color(0x0000FF,1)
@@ -202,12 +201,12 @@ if __name__=='__main__':
     x = TextAsset('X',fill=black,style='bold 100pt Times')
     o = TextAsset('O',fill=black,style='bold 100pt Times')
     Win = TextAsset('We Have A Winner!',fill=blue,style='bold 50pt Times')
+    Tie = TextAsset('We Have A Tie!',fill=blue,style='bold 50pt Times')
     
     Sprite(boxRight, (150,0))
     Sprite(boxRight, (350,0))
     Sprite(boxTop, (0,150))
     Sprite(boxBottom, (0,350))
-    '''Sprite(o, (200,0))'''
     
     App().listenMouseEvent('click',mouseClick)
     App().run()
