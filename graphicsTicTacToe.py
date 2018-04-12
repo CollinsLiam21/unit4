@@ -38,10 +38,11 @@ def mouseClick(event):
         if winner() == True:
             print('We have a winner!')
             data['gameOver'] == True
-        computerTurn()
-        if winner() == True:
-            print('We have a winner!')
-            data['gameOver'] = True
+        else:
+            computerTurn()
+            if winner() == True:
+                print('We have a winner!')
+                data['gameOver'] = True
         if fullBoard() == True and winner() == False:
             print('We have a tie!')
         
