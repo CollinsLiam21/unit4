@@ -7,34 +7,35 @@ from random import randint
 
 
 def mouseClick(event):
-    if (event.x < 150 and event.y < 150) and isEmpty(1) == True:
-        Sprite(x, (25,10))
-        data['square1'] = 'x'
-    elif (event.x < 350 and event.y < 150) and isEmpty(2) == True:
-        Sprite(x, (215,10))
-        data['square2'] = 'x'
-    elif (event.x < 550 and event.y < 150) and isEmpty(3) == True:
-        Sprite(x, (400,10))
-        data['square3'] = 'x'
-    elif (event.x < 150 and event.y < 350) and isEmpty(4) == True:
-        Sprite(x, (25,180))
-        data['square4'] = 'x'
-    elif (event.x < 350 and event.y < 350) and isEmpty(5) == True:
-        Sprite(x, (215,180))
-        data['square5'] = 'x'
-    elif (event.x < 550 and event.y < 350) and isEmpty(6) == True:
-        Sprite(x, (400,180))
-        data['square6'] = 'x'
-    elif (event.x < 150 and event.y < 550) and isEmpty(7) == True:
-        Sprite(x, (25,380))
-        data['square7'] = 'x'
-    elif (event.x < 350 and event.y < 550) and isEmpty(8) == True:
-        Sprite(x, (215,380))
-        data['square8'] = 'x'
-    elif (event.x < 550 and event.y < 550) and isEmpty(9) == True:
-        Sprite(x, (400,380))
-        data['square9'] = 'x'
-    computerTurn()
+    if data['gameOver'] == False:
+        if (event.x < 150 and event.y < 150) and isEmpty(1) == True:
+            Sprite(x, (25,10))
+            data['square1'] = 'x'
+        elif (event.x < 350 and event.y < 150) and isEmpty(2) == True:
+            Sprite(x, (215,10))
+            data['square2'] = 'x'
+        elif (event.x < 550 and event.y < 150) and isEmpty(3) == True:
+            Sprite(x, (400,10))
+            data['square3'] = 'x'
+        elif (event.x < 150 and event.y < 350) and isEmpty(4) == True:
+            Sprite(x, (25,180))
+            data['square4'] = 'x'
+        elif (event.x < 350 and event.y < 350) and isEmpty(5) == True:
+            Sprite(x, (215,180))
+            data['square5'] = 'x'
+        elif (event.x < 550 and event.y < 350) and isEmpty(6) == True:
+            Sprite(x, (400,180))
+            data['square6'] = 'x'
+        elif (event.x < 150 and event.y < 550) and isEmpty(7) == True:
+            Sprite(x, (25,380))
+            data['square7'] = 'x'
+        elif (event.x < 350 and event.y < 550) and isEmpty(8) == True:
+            Sprite(x, (215,380))
+            data['square8'] = 'x'
+        elif (event.x < 550 and event.y < 550) and isEmpty(9) == True:
+            Sprite(x, (400,380))
+            data['square9'] = 'x'
+        computerTurn()
     
 
 def computerTurn():
@@ -66,7 +67,7 @@ def computerTurn():
     elif n == 9 and isEmpty(9) == True:
         Sprite(o, (400,380))
         data['square9'] = 'o'
-    else:
+    elif fullBoard() == False:
         computerTurn()
         
 
@@ -120,6 +121,7 @@ def isEmpty(numSquare):
 def fullBoard():
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
         return True
+        data['gameOver'] == True
     else:
         return False
     
@@ -139,7 +141,7 @@ if __name__=='__main__':
     data['square7'] = ''
     data['square8'] = ''
     data['square9'] = ''
-    data['gameOver'] = 'False'
+    data['gameOver'] = False
     
     
     #color codes
