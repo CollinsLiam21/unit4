@@ -132,7 +132,7 @@ def fullBoard():
         return False
 
 def winner():
-    if isEmpty(1) == 'x' and isEmpty(2) == 'x' and isEmpty(3) == 'x':
+    if data['square1'] = 'x' and isEmpty(2) == 'x' and isEmpty(3) == 'x':
         return True
     elif isEmpty(4) == 'x' and isEmpty(5) == 'x' and isEmpty(6) == 'x':
         return True
