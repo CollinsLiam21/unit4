@@ -132,19 +132,19 @@ def fullBoard():
         return False
 
 def winner():
-    if data['square1'] = 'x' and isEmpty(2) == 'x' and isEmpty(3) == 'x':
+    if data['square1'] = 'x' and data['square2'] = 'x' and data['square3'] = 'x'':
         return True
-    elif isEmpty(4) == 'x' and isEmpty(5) == 'x' and isEmpty(6) == 'x':
+    elif data['square4'] == 'x' and data['square5'] == 'x' and data['square6'] == 'x':
         return True
-    elif isEmpty(7) == 'x' and isEmpty(8) == 'x' and isEmpty(9) == 'x':
+    elif data['square7'] == 'x' and data['square8'] == 'x' and data['square9'] == 'x':
         return True
-    elif isEmpty(1) == 'x' and isEmpty(4) == 'x' and isEmpty(7) == 'x':
+    elif data['square1'] == 'x' and data['square4'] == 'x' and data['square7'] == 'x':
         return True
-    elif isEmpty(2) == 'x' and isEmpty(5) == 'x' and isEmpty(8) == 'x':
+    elif data['square2'] == 'x' and data['square5'] == 'x' and data['square8'] == 'x':
         return True
-    elif isEmpty(3) == 'x' and isEmpty(6) == 'x' and isEmpty(9) == 'x':
+    elif data['square3'] == 'x' and data['square6'] == 'x' and data['square9'] == 'x':
         return True
-    elif isEmpty(1) == 'x' and isEmpty(5) == 'x' and isEmpty(9) == 'x':
+    elif data['square1'] == 'x' and data['square5'] == 'x' and data['square9'] == 'x':
         return True
     elif isEmpty(3) == 'x' and isEmpty(5) == 'x' and isEmpty(7) == 'x':
         return True
