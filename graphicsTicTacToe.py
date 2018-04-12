@@ -35,7 +35,12 @@ def mouseClick(event):
         elif (event.x < 550 and event.y < 550) and isEmpty(9) == True:
             Sprite(x, (400,380))
             data['square9'] = 'x'
+        if winner() == True:
+            print('We have a winner!')
         computerTurn()
+        if winner() == True:
+            print('We have a winner!')
+        
     
 
 def computerTurn():
@@ -69,6 +74,7 @@ def computerTurn():
         data['square9'] = 'o'
     elif fullBoard() == False:
         computerTurn()
+    
         
 
 def isEmpty(numSquare):
@@ -128,52 +134,36 @@ def fullBoard():
 def winner():
     if isEmpty(1) == 'x' and isEmpty(2) == 'x' and isEmpty(3) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(4) == 'x' and isEmpty(5) == 'x' and isEmpty(6) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(7) == 'x' and isEmpty(8) == 'x' and isEmpty(9) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(1) == 'x' and isEmpty(4) == 'x' and isEmpty(7) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(2) == 'x' and isEmpty(5) == 'x' and isEmpty(8) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(3) == 'x' and isEmpty(6) == 'x' and isEmpty(9) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(1) == 'x' and isEmpty(5) == 'x' and isEmpty(9) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(3) == 'x' and isEmpty(5) == 'x' and isEmpty(7) == 'x':
         return True
-        print('We Have a Winner')
     elif isEmpty(1) == 'o' and isEmpty(2) == 'o' and isEmpty(3) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(4) == 'o' and isEmpty(5) == 'o' and isEmpty(6) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(7) == 'o' and isEmpty(8) == 'o' and isEmpty(9) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(1) == 'o' and isEmpty(4) == 'o' and isEmpty(7) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(2) == 'o' and isEmpty(5) == 'o' and isEmpty(8) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(3) == 'o' and isEmpty(6) == 'o' and isEmpty(9) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(1) == 'o' and isEmpty(5) == 'o' and isEmpty(9) == 'o':
         return True
-        print('We Have a Winner')
     elif isEmpty(3) == 'o' and isEmpty(5) == 'o' and isEmpty(7) == 'o':
         return True
-        print('We Have a Winner')
     else:
         return False
     
