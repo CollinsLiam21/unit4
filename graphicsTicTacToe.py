@@ -35,8 +35,6 @@ def mouseClick(event):
         elif (350 < event.x < 550 and 350 < event.y < 550) and isEmpty(9) == True:
             Sprite(x, (400,380))
             data['square9'] = 'x'
-        else:
-            mouseClick(event)
         if winner() == True:
             Sprite(Win, (600,100))
             data['gameOver'] = True
