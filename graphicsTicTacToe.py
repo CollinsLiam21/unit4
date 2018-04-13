@@ -11,28 +11,28 @@ def mouseClick(event):
         if (event.x < 150 and event.y < 150) and isEmpty(1) == True:
             Sprite(x, (25,10))
             data['square1'] = 'x'
-        elif (event.x < 350 and event.y < 150) and isEmpty(2) == True:
+        elif (150 < event.x < 350 and event.y < 150) and isEmpty(2) == True:
             Sprite(x, (215,10))
             data['square2'] = 'x'
-        elif (event.x < 550 and event.y < 150) and isEmpty(3) == True:
+        elif (350 < event.x < 550 and event.y < 150) and isEmpty(3) == True:
             Sprite(x, (400,10))
             data['square3'] = 'x'
-        elif (event.x < 150 and event.y < 350) and isEmpty(4) == True:
+        elif (event.x < 150 and 150 < event.y < 350) and isEmpty(4) == True:
             Sprite(x, (25,180))
             data['square4'] = 'x'
-        elif (event.x < 350 and event.y < 350) and isEmpty(5) == True:
+        elif (150 < event.x < 350 and 150 < event.y < 350) and isEmpty(5) == True:
             Sprite(x, (215,180))
             data['square5'] = 'x'
-        elif (event.x < 550 and event.y < 350) and isEmpty(6) == True:
+        elif (350 < event.x < 550 and 150 < event.y < 350) and isEmpty(6) == True:
             Sprite(x, (400,180))
             data['square6'] = 'x'
-        elif (event.x < 150 and event.y < 550) and isEmpty(7) == True:
+        elif (event.x < 150 and 350 < event.y < 550) and isEmpty(7) == True:
             Sprite(x, (25,380))
             data['square7'] = 'x'
-        elif (event.x < 350 and event.y < 550) and isEmpty(8) == True:
+        elif (150 < event.x < 350 and 350 < event.y < 550) and isEmpty(8) == True:
             Sprite(x, (215,380))
             data['square8'] = 'x'
-        elif (event.x < 550 and event.y < 550) and isEmpty(9) == True:
+        elif (350 < event.x < 550 and 350 < event.y < 550) and isEmpty(9) == True:
             Sprite(x, (400,380))
             data['square9'] = 'x'
         if winner() == True:
